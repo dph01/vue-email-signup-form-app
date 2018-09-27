@@ -6,11 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit:old": "vue-cli-service test:unit",
+    "test:unit": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
+    "jest": "^23.6.0",
     "vue": "^2.5.16",
     "vue-axios": "^2.1.1"
   },
@@ -23,6 +25,8 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
+    "jest": "^23.6.0",
+    "vue-jest": "^2.6.0",
     "vue-template-compiler": "^2.5.16"
   },
   "eslintConfig": {
@@ -51,5 +55,11 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest"
+    }
+  }
 }
